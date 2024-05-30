@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\profileController;
-use App\Http\Controllers\Admin\{adminController,dashboardController};
-use App\Http\Controllers\cabangController;
-use App\Http\Controllers\jabatanController;
-use App\Http\Controllers\LogSessionController;
 use App\Http\Controllers\jobController;
+use App\Http\Controllers\kpiController;
+use App\Http\Controllers\cabangController;
 use App\Http\Controllers\relateController;
-use App\Http\Controllers\reviewJobController;
+use App\Http\Controllers\jabatanController;
+use App\Http\Controllers\profileController;
 use App\Http\Controllers\FunctionsController;
+use App\Http\Controllers\reviewJobController;
+use App\Http\Controllers\LogSessionController;
+use App\Http\Controllers\Admin\{adminController,dashboardController};
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,8 @@ Route::group(['middleware' => 'auth', 'PreventBackHistory'], function () {
         Route::resource('/jabatan', jabatanController::class);
         // log
         Route::resource('log', LogSessionController::class);
+        //KPI
+        Route::resource('kpi', kpiController::class);
 
     });
 

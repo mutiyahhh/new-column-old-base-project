@@ -26,4 +26,9 @@ class Level extends Model
     {
         return $this->hasMany(Job::class);
     }
+
+    public function Kpi()
+    {
+        return $this->hasMany(Kpi::class, 'level_id', 'id');
+    }
 }

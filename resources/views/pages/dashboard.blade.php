@@ -78,7 +78,41 @@
                     </div>
                 </div>
             </div>
+<!-- KPI  -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>KPI</h4>
+            </div>
+            <div class="card-body">
+                <!-- List Dokumen -->
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>KPI</h5>
+                            <ul>
+                               @foreach ($kpis as $kpi )
+                                   <li>{{$kpi->name_kpi}}</li>
+                               @endforeach
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Performance Measure</h5>
+                            <ul>
+                                @foreach ($kpis as $mea )
+                                   <li>{{$mea->p_measure}}</li>
+                               @endforeach
+                            </ul>
+                        </div>
 
+                    </div>
+                </div>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
             <!-- Daily, Weekly, Monthly Tasks -->
             <div class="row">
                 <div class="col-md-12">

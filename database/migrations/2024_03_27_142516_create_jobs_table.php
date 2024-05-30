@@ -22,8 +22,6 @@ return new class extends Migration
             $table->unsignedBigInteger('cabang_id'); // Foreign key to cabangs table
             $table->timestamps();
 
-            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
-            $table->foreign('cabang_id')->references('id')->on('cabangs')->onDelete('cascade');
         });
     }
 

@@ -79,6 +79,14 @@
                                 </p>
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('kpi.index') }}" class="nav-link @yield('kpi')">
+                                <i class="nav-icon ion ion-document" style="color: black;"></i>
+                                <p style="color: black;">KPI</p>
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             @endif
